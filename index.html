@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de presupuestos para clientes cabrones</title>
+    <link rel="stylesheet" href="minimal.css" type="text/css">
+  </head>
+  <body>
+    <div id="app">
+      <h1>Calculadora de presupuestos para clientes cabrones</h1>
+      <div>
+        <p>Tiempo estándar de desarrollo en condiciones normales</p>
+        <input
+          type="number"
+          id="TE"
+          placeholder="Tiempo estándar de desarrollo"
+        />
+      </div>
+      <div>
+        <p>
+          ¿Cuál es el índice de complejidad que le atribuyes a este proyecto
+        </p>
+        <input
+          type="number"
+          id="IC"
+          placeholder="entre 1 y 2"
+          step="0.01"
+          min="1"
+          max="2"
+        />
+      </div>
+      <div>
+        <p>¿En cuánto afectaría tu SALUD MENTAL este proyecto</p>
+        <input
+          type="number"
+          id="SM"
+          placeholder="entre 0 y 1"
+          step="0.01"
+          min="0"
+          max="1"
+        />
+      </div>
+      <div>
+        <p>
+          ¿Cuál es tu PRECIO por HORA en <strong>condiciones normales</strong>?
+        </p>
+        <input type="number" id="PH" placeholder="Precio por hora normal" />
+      </div>
+      <div>
+        <p>Del 0 al 1 ¿Cuánto de ganas tienes de quitarte de encima a este cliente?</p>
+        <input
+        type="number"
+        id="MG"
+        placeholder="Nivel de CABRÓN del cliente"
+        step="0.01"
+        min="0"
+        max="1"
+      />
+      <p>Donde 0 es "lo quiero atender" y 1 es "No lo quiero atender"</p>
+      </div>
+      <button id="calculateBtn">COTIZAR</button>
+      <p id="costResult">Cuánto te recomendamos  cobrar al bastardo:</p>
+      <p id="timeResult">Tiempo de entrega recomendado para este proyecto:</p>
+      <p id="profitMarginResult">Margen de GANANCIA: </p>
+    </div>
+    <script src="calc.js"></script>
+  </body>
+</html>
