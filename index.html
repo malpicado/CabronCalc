@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de presupuestos para clientes cabrones</title>
-    <link rel="stylesheet" href="minimal.css" type="text/css">
+    <link rel="stylesheet" href="minimal.css" type="text/css" />
   </head>
   <body>
     <div id="app">
       <h1>Calculadora de presupuestos para clientes cabrones</h1>
       <div>
-        <p>Tiempo estándar de desarrollo en condiciones normales</p>
+        <h3>Tiempo estándar de desarrollo en condiciones normales</h3>
+        <p class="description">
+          indica la cantidad de horas que te tomaría hacer este proyecto en las
+          condiciones más adecuadas.
+        </p>
         <input
           type="number"
           id="TE"
@@ -19,8 +23,12 @@
         />
       </div>
       <div>
-        <p>
+        <h3>
           ¿Cuál es el índice de complejidad que le atribuyes a este proyecto
+        </h3>
+        <p class="description">
+          Este índice puede ser un número entero o decimal entre 1 y 2, donde 1
+          es MÁS FÁCIL y 2 es MÁS DIFÍCIL.
         </p>
         <input
           type="number"
@@ -32,7 +40,11 @@
         />
       </div>
       <div>
-        <p>¿En cuánto afectaría tu SALUD MENTAL este proyecto</p>
+        <h3>¿En cuánto afectaría tu SALUD MENTAL este proyecto</h3>
+        <p class="description">
+          Este número puede ser un entero o decimal entre 0 y 1, Donde 0
+          significa que NO TE AFECTA y 1 que TE HACE PATINAR EL COCO.
+        </p>
         <input
           type="number"
           id="SM"
@@ -43,28 +55,38 @@
         />
       </div>
       <div>
-        <p>
-          ¿Cuál es tu PRECIO por HORA en <strong>condiciones normales</strong>?
-        </p>
+        <h3>
+          ¿Cuál es tu PRECIO por HORA en condiciones normales?
+        </h3>
+        <p class="description">El valor "normal" que sueles cobrar a "clientes normales" por hora de trabajo.</p>
         <input type="number" id="PH" placeholder="Precio por hora normal" />
       </div>
       <div>
-        <p>Del 0 al 1 ¿Cuánto de ganas tienes de quitarte de encima a este cliente?</p>
+        <h3>
+          Del 0 al 1 ¿Cuánto de ganas tienes de quitarte de encima a este
+          cliente?
+        </h3>
+        <p class="description">
+          Este número puede ser un entero o decimal entre 0 y 1, donde 0 es "SÍ lo quiero atender" y 1 es "NO lo quiero atender".
+        </p>
         <input
-        type="number"
-        id="MG"
-        placeholder="Nivel de CABRÓN del cliente"
-        step="0.01"
-        min="0"
-        max="1"
-      />
-      <p>Donde 0 es "lo quiero atender" y 1 es "No lo quiero atender"</p>
+          type="number"
+          id="MG"
+          placeholder="Nivel de CABRÓN del cliente"
+          step="0.01"
+          min="0"
+          max="1"
+        />
       </div>
       <button id="calculateBtn">COTIZAR</button>
-      <p id="costResult">Cuánto te recomendamos  cobrar al bastardo:</p>
+      <p id="costResult">Cuánto te recomendamos cobrar al bastardo:</p>
       <p id="timeResult">Tiempo de entrega recomendado para este proyecto:</p>
-      <p id="profitMarginResult">Margen de GANANCIA: </p>
+      <p id="profitMarginResult">Margen de GANANCIA:</p>
     </div>
+    <footer>
+      <p class="creditos">© 2023 Derechos reservados - Desarrollado por <a href="https://twitch.tv/malpicado" class="twitch" target="_blank">Malpicado</a></p>
+      <img src="LOGO CANAL.png" alt="malpicado" class="logo">
+    </footer>
     <script src="calc.js"></script>
   </body>
 </html>

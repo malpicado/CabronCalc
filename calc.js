@@ -20,25 +20,30 @@ document.getElementById("calculateBtn").addEventListener("click", function () {
   let costeTotal = tiempoEntrega * (PH * (1 + MG));
 
   //Mostramos el coste total del proyecto
-  document.getElementById(
-    "costResult"
-  ).innerHTML = `Cuánto te recomendamos cobrar al bastardo: ${costeTotal.toFixed(
+  let costResult = document.getElementById(
+    "costResult");
+  costResult.innerHTML = `Cuánto te recomendamos cobrar al bastardo: ${costeTotal.toFixed(
     2
   )} en tu moneda.`;
+  costResult.style.display = 'block';
 
   //Calculamos y mostramos el tiempo de entrega recomendado para este proyecto
   let tiempoEntregaFinal = tiempoEntrega / 4;
   tiempoEntregaFinal = Math.ceil(tiempoEntregaFinal);
-  document.getElementById(
+  let timeResult = document.getElementById(
     "timeResult"
-  ).innerHTML = `Tiempo de entrega recomendado para este proyecto: ${tiempoEntregaFinal} días.`;
+  );
+  timeResult.innerHTML = `Tiempo de entrega recomendado para este proyecto: ${tiempoEntregaFinal} días.`;
+  timeResult.style.display = 'block';
 
   //Mostramos el margen de ganancia que supondría si el cliente acepta el presupuesto solicitado.
 
   let margenGanancia = costeTotal - TE * PH;
-  document.getElementById(
+  let profitMarginResult = document.getElementById(
     "profitMarginResult"
-  ).innerHTML = `Margen de GANANCIA: ${margenGanancia.toFixed(
+  );
+  profitMarginResult.innerHTML = `Margen de GANANCIA: ${margenGanancia.toFixed(
     2
   )} en tu moneda.`;
+  profitMarginResult.style.display = 'block';
 });

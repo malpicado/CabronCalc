@@ -3,7 +3,7 @@
 body{
     font-family: "Arial", sans-serif;
     padding: 10px;
-    background-color: #f8f8f8;
+    background-color: #018001;
 }
 
 #app{
@@ -23,6 +23,11 @@ h1{
     margin-bottom: 50px;
 }
 
+h3{
+    font-family: 'Ubuntu';
+    margin-bottom: 5px;
+    color: #333;
+}
 p{
     font-size: 18px;
     color: #333;
@@ -37,6 +42,9 @@ input{
     border-radius: 10px;
     border: 2px solid #018001;
     box-sizing: border-box;
+}
+input:hover{
+    border: 2px solid #f8ee1e;
 }
 
 button{
@@ -62,4 +70,31 @@ button:hover{
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 20px;
+    display: none;
+}
+
+.description{
+    font-size: 12px;
+    color: #018001;
+}
+
+footer{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.creditos{
+    font-size: 1em;
+    color: #eee;
+}
+
+.twitch{
+    text-decoration: none;
+    color: #f8ee1e;
+    font-weight: bold;
+}
+
+.logo{
+    align-items: center;
+    max-width: 50%;
 }
